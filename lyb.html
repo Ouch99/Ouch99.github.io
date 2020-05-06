@@ -140,9 +140,21 @@
 				ClearTextarea();
 			}
 			function clearStorage() {
-				window.localStorage.removeItem("myBoard");
-				loadStorage();
-				alert("已清空")
+				var password=prompt("请输入管理员密码：","");
+				if(password==null||password=="")
+				{
+					
+				}
+				else if(password!="123456")
+				{
+					alert("密码错误！")
+				}
+				else if(password=="123456")
+				{
+					window.localStorage.removeItem("myBoard");
+					loadStorage();
+					alert("已清空！")
+				}		
 			}
 			loadStorage();
 		</script>
