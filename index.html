@@ -78,7 +78,13 @@
 <script>
   layui.config({
     base: 'res/static/js/' 
-  }).use('firm'); 
+  }).use('firm');
+  window.onload=function(){
+   var img=document.getElementByTagName('img');
+    for(i=0;i<img.length;i++){
+      img[i].src=img[i].data-src;
+    }
+  }
 </script>
 </body>
 </html>
