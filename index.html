@@ -80,7 +80,7 @@
     base: 'res/static/js/' 
   }).use('firm');
   window.onload=function(){
-   var img=document.getElementByTagName('img');
+   var img=document.getElementsByTagName('img');
     for(i=0;i<img.length;i++){
       img[i].src=img[i].getAttribute("data-src");
     }
